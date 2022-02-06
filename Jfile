@@ -1,5 +1,10 @@
 pipeline{
   agent {label 'main'}
+environment {
+VERSION="${BUILD_NUMBER}"
+PROJECT='geniususer'
+IMAGE="$PROJECT:$VERSION" 
+'}
     stages{
        stage('hosting application'){
         steps{
